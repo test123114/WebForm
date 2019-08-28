@@ -72,7 +72,7 @@ namespace TestWebForm
                 .WithClientSecret(clientSecret)
                 .Build();
 
-            string[] scopes = { "https://graph.windows.net/user.read" };
+            string[] scopes = { "https://graph.microsoft.com/user.read" };
 
             var result = await idClient.AcquireTokenByAuthorizationCode(
                 scopes, notification.Code).ExecuteAsync();
